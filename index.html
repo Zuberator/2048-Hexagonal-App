@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>2048 Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+
+  <!-- WEB APP -->
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <!-- JS -->
+  <script defer src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+  <script defer src="js/functions.js"></script>
+</head>
+
+<body>
+
+  <section id="board" style="width: 406px; height: 406px;">
+    <div class="field" data-x="-1" data-y="1" data-z="0" data-value="" style="left: 0px; top: 66px;"><span></span></div>
+    <div class="field" data-x="-1" data-y="0" data-z="1" data-value="" style="left: 0px; top: 199px;"><span></span></div>
+    <div class="field" data-x="1" data-y="1" data-z="-1" data-value="" style="left: 119px; top: 0px;"><span></span></div>
+    <div class="field" data-x="0" data-y="0" data-z="0" data-value="" style="left: 119px; top: 133px;"><span></span></div>
+    <div class="field" data-x="0" data-y="-1" data-z="1" data-value="" style="left: 119px; top: 266px;"><span></span></div>
+    <div class="field" data-x="1" data-y="0" data-z="-1" data-value="" style="left: 238px; top: 66px;"><span></span></div>
+    <div class="field" data-x="1" data-y="-1" data-z="0" data-value="" style="left: 238px; top: 199px;"><span></span></div>
+
+    <!-- <div class="field" data-x="0" data-y="0" data-z="0" data-value="256" style="left: 0px; top: 332px;"><span></span></div>
+      <div class="field" data-x="0" data-y="-1" data-z="1" data-value="512" style="left: 0px; top: 465px;"><span></span></div>
+      <div class="field" data-x="1" data-y="0" data-z="-1" data-value="1024" style="left: 0px; top: 598px;"><span></span></div>
+      <div class="field" data-x="1" data-y="-1" data-z="0" data-value="2048" style="left: 0px; top: 731px;"><span></span></div> -->
+  </section>
+
+  <section id="status">
+
+    <div>Game Status: <span data-status="playing">playing</span></div>
+
+    <div>
+      <button data-generate-button>Generate!</button>
+      <button data-populate-all>Populate!</button>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

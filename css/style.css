@@ -1,0 +1,68 @@
+:root {
+  --fieldHeight: 140px; /* HEX size  */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0;
+  min-height: 100vh;
+  font: 1rem sans-serif;
+}
+
+#board {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #000;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  height: var(--fieldHeight);
+  width: calc(var(--fieldHeight) * 1.2);
+  /* width: calc(var(--fieldHeight) * 1.1547); */
+}
+
+.field span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  clip-path: inherit;
+  transition: 1s;
+}
+
+.field.active span {
+  animation: scale 250ms 2 alternate;
+}
+
+@keyframes scale {
+  to {
+    font-size: 3rem;
+  }
+}
